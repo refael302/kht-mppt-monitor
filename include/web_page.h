@@ -42,8 +42,14 @@ static const char INDEX_HTML[] = R"MPPT(<!DOCTYPE html>
   }
   .hero { margin-top: 18px; padding: 22px 18px; }
   .label { color: var(--muted); font-size: 0.9rem; }
+  .hero .value, .tile .value {
+    direction: ltr;
+    unicode-bidi: isolate;
+    text-align: right;
+    white-space: nowrap;
+  }
   .hero .value { font-size: 4rem; line-height: 1; margin: 8px 0 0; font-variant-numeric: tabular-nums; }
-  .unit { color: var(--amber); font-size: 1.3rem; margin-right: 6px; }
+  .unit { color: var(--amber); font-size: 1.6rem; margin-left: 8px; }
   .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
   .tile { border-radius: 16px; padding: 14px; }
   .tile .value { font-size: 1.7rem; margin-top: 6px; font-variant-numeric: tabular-nums; }
