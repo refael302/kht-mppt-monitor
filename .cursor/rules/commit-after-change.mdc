@@ -1,0 +1,20 @@
+---
+description: Commit every completed change before moving on
+alwaysApply: true
+---
+
+# Commit after every change
+
+After each completed change, create a git commit before starting the next change.
+
+- Stage only files that belong to that change.
+- Write a short message that states why the change was made.
+- Do not commit secrets (`.env`, credentials, keys).
+- Do not push unless the user asks.
+- Do not amend a pushed commit. If a hook rejects the commit, fix the problem and create a new commit.
+- If there is nothing to commit, do not create an empty commit.
+
+```bash
+git add path/to/files
+git commit -m "Explain why this change exists."
+```
